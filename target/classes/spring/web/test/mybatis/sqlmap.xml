@@ -3,9 +3,22 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
+
     
-        <mapper namespace="">
     
+    
+        <mapper namespace="spring.web.test.dao.BoardDao">
+    
+        
+    <select id="getBoardList" resultType="spring.web.test.vo.BoardVo">
+    select * from board
+    </select>
    
+   
+    <select id="getBoard" resultType="spring.web.test.vo.BoardVo" parameterType="java.lang.String">
+    select * from board where seq = ${seq}
+    </select>
+    
+    
     
     </mapper>
